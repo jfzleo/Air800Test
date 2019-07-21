@@ -1,0 +1,17 @@
+<!--<include src="../../../components/dialog/dialog.wxml"/>-->
+<dialog id="modal"
+        backdrop="{{flase}}"
+        title="{{modalTitle}}"
+        cancelText="取消"
+        confirmText="确认"
+        bind:cancelEvent="onDialogCancel"  
+        bind:confirmEvent="onDialogConfirm">
+
+    <view class='modal-body'>
+        <view class='modal-content'> 
+            <text>{{modalContent}}</text>
+            <progress show-info percent="{{modalProgress}}" />
+        </view> 
+    </view>
+
+</dialog>

@@ -1,0 +1,44 @@
+/* pages/bms/total.wxss */
+.canvas {
+  width: 100%;
+  height: 180px;
+  }
+.total{display: block; height: 100%; box-sizing: border-box; padding: 0 32rpx;}
+.total .active{display: block;}
+.total .itemList{border: 1px solid black;display: flex;border-bottom: none;}
+.total .itemList:last-child{border-bottom: 1px solid black;}
+.total .itemList .key{background: #B9C1C0;color: #365A91;padding: 0 4px;}
+.total .itemList .value{padding: 0 4px;word-break:break-all;background: #4170BE;color: #fff;flex: 1;}
+.total .tagGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.total .tag {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  /** background-color: #1aad19; **/
+  background-color: #4170BE;
+  margin: 0rpx 20rpx;
+  padding: 0rpx 20rpx;
+  border-radius: 24rpx;
+  flex: 1;
+  max-width: 130px;
+}
+.total .tagText {
+  font-size: 19px;
+  color: #FFFFFF;
+}
+.total .tagTextSmall {
+  font-size: 14px;
+  color: #FFFFFF;
+}
+.total .tag-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.total .key{width: 30%;}

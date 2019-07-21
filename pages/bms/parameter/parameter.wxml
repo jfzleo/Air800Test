@@ -1,0 +1,16 @@
+<!--pages/bms/parameter/parameter.wxml-->
+<view class='parameter-container' wx:if="{{searchSuccess}}">
+  <view class="buttonGroup{{connectMode == 1? '-hidden' : ''}}">
+    <button type='default' bindtap='bleParamRefresh'>刷新</button>
+    <button disabled="{{!(batteryConfigValue.length > 0)}}" 
+    bindtap='bleParamRecord' loading="{{isRecording}}" type='primary'>记录</button>
+    <button class="{{isAdmin? '' : 'hidden'}}" disabled="{{!(batteryConfigValue.length > 0)}}" 
+    bindtap='bleParamEdit' type='primary'>{{isEdit ? '保存' : '编辑'}}</button>
+  </view>
+  <scroll-view scroll-y="true">
+    <view wx:for="{{batteryConfigValue}}" class='itemList' wx:key="{{item.key}}">
+        <text class='key'>{{batteryConfigKey[index]}}</text>
+        <text class='value'>{{item}}</text>
+    </view>
+  </scroll-view>
+</view>

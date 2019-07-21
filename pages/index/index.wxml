@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="navigator-box-show">
+    <navigator url="../bms/home/home?connectMode=1" open-type='redirect' class="navigator">
+        <view class="navigator-text">通过互联网连接设备</view>
+        <view class="navigator-arrow"></view>
+    </navigator>
+    <navigator url="../blescan/blescan" class="navigator">
+        <view class="navigator-text">通过蓝牙连接设备</view>
+        <view class="navigator-arrow"></view>
+    </navigator>
+  </view>
+
+  <view class="app-info" bindtap='adminModeClick'>
+    <text>当前版本：{{appVersion}}</text>
+    <text>© 2019 杭州极速电子</text>
+  </view>
+
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+</view>

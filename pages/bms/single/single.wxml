@@ -1,0 +1,17 @@
+<!--pages/bms/single/single.wxml-->
+<view class='single' wx:if="{{searchSuccess}}">
+  <text class='tableTitle'>电池温度</text>
+  <view class="temperatureList">
+      <view wx:for="{{temperatureList}}" class='temperatureListItem' wx:key="{{item.index}}">
+        <text class='key'>温度{{index+1}}</text>
+        <text class='value'>{{item}}</text>
+      </view>
+  </view>
+  <text class='tableTitle'>单体电压</text>
+  <view class="singleBatteryInfo}}">
+      <view wx:for="{{singleBatteryInfo}}" class='itemList' wx:key="{{item.key}}">
+        <text class='key'>电芯{{index+1}}</text>
+        <text class='value'>{{item}}</text>
+      </view>
+  </view>
+</view>

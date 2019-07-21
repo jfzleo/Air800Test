@@ -1,0 +1,19 @@
+<view class="container">
+  <form catchsubmit="formSubmit">
+    <view class="login-line">
+      <text>用户名称：</text>
+      <input class="login-input" name="name" placeholder="请输入用户名" value="{{userName}}"/>
+    </view>
+    <view class="login-line">
+      <text>用户密码：</text>
+      <input password="{{!showPassword}}" class="login-input" name="password" 
+      placeholder="请输入密码" value="{{userPassword}}"/>
+    </view>
+    <view class="login-line">
+      <checkbox-group  class="login-cg" bindchange="onCheckChanged">
+        <checkbox name="showPassword" value="showPassword">显示密码</checkbox>
+      </checkbox-group>
+      <button type="primary" formType="submit">登 陆</button>
+    </view>
+  </form>
+</view>

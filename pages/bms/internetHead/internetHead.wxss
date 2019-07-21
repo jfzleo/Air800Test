@@ -1,0 +1,125 @@
+/* pages/bms/internetHead/internetHead.wxss */
+.search {
+  display: flex;
+  padding: 10rpx 32rpx 0rpx;
+  width: 100%;
+  box-sizing: border-box;
+  flex-direction: column;}
+  
+.search .status {
+  display: flex;
+  margin:0rpx 0rpx;
+  flex-direction: row;
+  width:100%;
+  justify-content: space-between;
+  align-items: center;}
+
+.search .status input {
+  border: 1px solid #ccc;
+  text-align: center;
+  height: 60rpx;
+  width: 50%;
+}
+.search .status .buttonGroup {
+  display: flex;
+  margin: 0rpx 0rpx 0rpx 20rpx;
+  box-sizing:border-box;
+  justify-content: space-between;
+  flex-grow: 1;
+  flex-direction: row;
+}
+.search .status .buttonGroup button {
+  font-size: 13px;
+  box-sizing:border-box;
+  margin: 6rpx 6rpx 6rpx 20rpx;
+  padding: 0rpx 0rpx;
+  flex: 1;
+  }
+.search .status .status {
+    width: 30%;
+    margin: 0rpx 30rpx 0rpx 10rpx;
+    flex: 1;
+}
+.search .status text{
+  flex: 1;
+}
+
+.search .status .buttonGroup2 {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  font-size: 12px;
+  width: 70%;
+  justify-content: space-between;
+  margin: 40rpx 0rpx;
+  }
+.search .status .buttonGroup2 .reloadDevice{
+  flex-grow: 1;
+  font-size: 12px;
+  margin: 6rpx 6rpx 6rpx 16rpx;
+  }
+  .search .status .infoListTotal {
+    display: none;
+    margin: 30rpx 0rpx 0rpx 0rpx;
+    width: 50%;
+  }
+.search .status .infoListTotal .itemList{border: 1px solid black;display: flex;border-bottom: none;}
+.search .status .infoListTotal .itemList:last-child{border-bottom: 1px solid black;}
+.search .status .infoListTotal .itemList .key{background: #B9C1C0;color: #365A91;padding: 0 4px;}
+.search .status .infoListTotal .itemList .value{padding: 0 4px;word-break:break-all;background: #4170BE;color: #fff;flex: 1;}
+
+.search .operate {display: flex;justify-content: space-between;padding-top: 8px;}
+.search .operate .button{display: flex;justify-content:center;align-items: center;}
+.search .operate .button button{font-size: 14px;margin: 6px 8px;padding: 0 20px;}
+
+.resultNav{display: flex; flex-direction: column; height: 100%; box-sizing: border-box; padding: 0 32rpx;}
+.resultNav .tab{display: none;}
+.resultNav .active{display: block;}
+.resultNav .itemList{border: 1px solid black;display: flex;border-bottom: none;}
+.resultNav .itemList:last-child{border-bottom: 1px solid black;}
+.resultNav .itemList .key{background: #B9C1C0;color: #365A91;padding: 0 4px;}
+.resultNav .itemList .value{padding: 0 4px;word-break:break-all;background: #4170BE;color: #fff;flex: 1;}
+
+.resultNav .batteryConfig .key{width: 200px;}
+.resultNav .buttonGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90rpx;
+  margin: 0rpx 0rpx 10rpx;
+}
+.resultNav .buttonGroup .hidden {
+  display: none;
+}
+.resultNav .buttonGroup button {
+  display: flex;
+  box-sizing: border-box;
+  width:40%;
+  height: 60rpx;
+  font-size: 32rpx;
+  justify-content: center;
+  align-items: center;
+  flex : 1;
+  margin: 0rpx 10rpx;
+}
+.resultNav .buttonGroup-hidden {
+  display: none;
+}
+
+#map {
+  width: 100%;
+  height: 320px;
+  margin: 10rpx 0rpx;
+  }
+
+.search .buttonGroup {
+  display: flex;
+  margin: 50rpx 0rpx;
+  justify-content: center;
+  flex-direction: column;
+  align-content: space-between;
+  padding: 0rpx 0rpx;
+}
+

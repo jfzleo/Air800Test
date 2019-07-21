@@ -1,0 +1,14 @@
+<!--pages/bms/location/location.wxml-->
+<view class='resultNav' wx:if="{{searchSuccess}}">
+    <view class="tab {{currentTab==3? 'active' : ''}}">
+      <view wx:for="{{GPSInfoList}}" class='itemList' wx:key="{{item.key}}">
+        <text class='key'>{{item.key}}</text>
+        <text class='value'>{{item.value}}</text>
+      </view>
+      <view wx:for="{{batterySpeed}}" class='itemList' wx:key="{{item.key}}">
+        <text class='key'>{{item.key}}</text>
+        <text class='value'>{{item.value}}</text>
+      </view>
+      <map id="map" scale="14" markers="{{markers}}" show-location></map>
+    </view>
+</view>

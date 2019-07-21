@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/bms/home/home",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/login/login",
+    "pages/blescan/blescan",
+    "pages/batteryGPS/batteryGPS",
+    "pages/bleParamEditor/bleParamEditor"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "电池信息管理系统",
+    "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "sitemapLocation": "sitemap.json"
+}

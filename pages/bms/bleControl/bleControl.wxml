@@ -1,0 +1,18 @@
+<!--pages/bms/bleControl/bleControl.wxml-->
+<view class='resultNav'>
+  <text class='bmsVersion'>{{bmsVersionInfo}}</text>
+  <view class="buttonGroup">
+    <button type='default' bindtap='bleControl' data-type='getVersion'>获取版本</button>
+    <button type='default' bindtap='bleControl' data-type='reset'>复位</button>
+  </view>
+  <view class="buttonGroup">
+    <button type='default' bindtap='bleControl' data-type='powerOff'>关机</button>
+    <button type='default' bindtap='bleControl' data-type='calibrate'>电量校准</button>
+  </view>
+
+  <view class="buttonGroup">
+    <button type='default' bindtap='bleControl' data-type='powerOffCause'>关机日志</button>
+    <!-- hidden="{{!isAdmin}}" -->
+    <button type='default' bindtap='bleControl' data-type='bmsUpdate'>{{bmsBtnUpdate}}</button>
+  </view>
+</view>

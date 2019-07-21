@@ -1,0 +1,52 @@
+<!--pages/bleParamEditor/bleParamEditor.wxml-->
+<wxs module="helper">
+  var idxOf = function(array, item) {
+    return array.indexOf(item);
+  }
+  module.exports.indexOf = idxOf;
+</wxs>
+
+<modal class="modal" 
+title="{{batteryConfigKey[modifyIndex]}}"
+hidden="{{!dialogShow}}" bindcancel="dialogCancel" bindconfirm="dialogConfirm">
+  <view class='input-container'>
+  <input class='{{modifyIndex == 29 ? "hidden" : ""}}' bindinput="dialogInputChange" value='{{inputValue}}'/>
+  <button class='{{modifyIndex == 44 ? "button" : "hidden"}}' type='default' bindtap='deviceRegister' 
+  disabled="{{isDeviceIdEdited}}" loading="{{registerLoading}}">注册</button>
+  <checkbox-group class='{{modifyIndex != 29 ? "hidden" : "cb-group"}}' bindchange="programCtrlChange">
+    <label class="checkbox" wx:for="{{ctrlItems}}" wx:key="{{item.value}}">
+      <checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+    </label>
+  </checkbox-group>
+  </view>
+</modal>
+
+<view class=".container">
+  <view class='resultNav'>
+    <view class="buttonGroup">
+      <button type='default' bindtap='bleParamRestore'>撤销修改</button>
+      <button type='primary' disabled="{{modifyList.length < 1}}" bindtap='bleParamEditConfirm'>确认修改</button>
+    </view>
+    <scroll-view scroll-y="true" style="height:{{winHeight - 57}}px">
+      <view class="tab batteryConfig active}}">
+        <view wx:for="{{batteryConfigValue}}" class='itemList' wx:key="{{item.key}}">
+          <text class="key{{(helper.indexOf(emphasis, index) != -1)? '-emphasis' : ''}}">{{batteryConfigKey[index]}}</text>
+          <text class="key-modify{{(helper.indexOf(modifyList, index) != -1)? '-emphasis' : ''}}">*</text>
+          <view class='value-container' wx:if="{{index == 26 || index == 39 || index == 41}}">
+            <picker class='value-container' mode="date" data-index='{{index}}' value="{{date[index]}}" start="2015-01-01" end="2255-12-31" bindchange="onDateChange">
+              <text class='value' bindtap='paramValueClick' data-index='{{index}}'>{{item}}</text>
+            </picker>
+          </view>
+          <view class='value-container' wx:elif="{{index == 27 || index == 40 || index == 42}}"> 
+            <picker class='value-container' mode="time" data-index='{{index}}' value="{{time[index]}}" start="00:00" end="23:59" bindchange="onTimeChange">
+              <text class='value' bindtap='paramValueClick' data-index='{{index}}'>{{item}}</text>
+            </picker>
+          </view>
+          <view class='value-container' wx:else> 
+            <text class='value' bindtap='paramValueClick' data-index='{{index}}'>{{item}}</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

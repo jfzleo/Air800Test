@@ -1,0 +1,34 @@
+<!--pages/batteryGPS.wxml-->
+<view>
+  <view class="section start">
+    <picker class='date' mode="date" value="{{date}}" start="2018-01-01" end="" bindchange="startDate">
+      <view class="picker">
+        开始日期: {{startDate}}
+      </view>
+    </picker>
+    <picker class='time' mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="startTime">
+      <view class="picker">
+        开始时间: {{startTime}}
+      </view>
+    </picker>
+  </view>
+  <view class="section end">
+    <picker class='date' mode="date" value="{{date}}" start="2018-01-01" end="" bindchange="endDate">
+      <view class="picker">
+        结束日期: {{endDate}}
+      </view>
+    </picker>
+    <picker class='time' mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="endTime">
+      <view class="picker">
+        结束时间: {{endTime}}
+      </view>
+    </picker>
+  </view>
+  <view class='operator'>
+    <button bindtap='getDevicePositionHistory' type='primary' size='mini'>查询轨迹</button>
+  </view>
+  <view wx:if="{{searchSuccess}}">
+    <!-- <map id="devicePositionHistory" scale="14" polyline="{{polyline}}" markers="{{markers}}" show-location></map> -->
+    <map id="devicePositionHistory" scale="14" markers="{{markers}}" show-location></map>
+  </view>
+</view>

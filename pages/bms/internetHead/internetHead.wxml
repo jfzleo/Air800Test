@@ -1,0 +1,26 @@
+<!--pages/bms/internetHead/internetHead.wxml-->
+<import src="../../common/foot.wxml"/>
+
+<view class='search'>
+    <view class='status'>
+      <input bindinput="inputDeviceID" placeholder='请输入设备编号' type='number' value='{{deviceNumber}}' maxlength='10' />
+      <view class='buttonGroup'>
+        <button bindtap='getDeviceInfoByScanCode' type='primary'>扫码</button>
+        <button bindtap='getDeviceInfo' type='primary'>查询</button>
+      </view>
+    </view>
+    <view class='status'>
+      <view class='infoListTotal'>
+        <view wx:for="{{infoListTotal}}" class='itemList' wx:key="{{item.key}}">
+          <text class='key'>{{item.key}}</text>
+          <text class='value'>{{item.value}}</text>
+        </view>
+      </view>
+      <icon style="margin-left:10rpx" type="{{deviceStatus == '在线' ? 'success' : (deviceStatus == '离线' ? 'warn' : 'cancel')}}" size="14"/>
+      <text class='status'>{{deviceStatus}}</text>
+      <view class='buttonGroup2'> 
+          <button class='reloadDevice' bindtap="reloadDevice" type='default'>{{reloadDeviceTime}}</button>
+          <button class='reloadDevice' bindtap="goDevicePositionHistory" type='default'>电池轨迹</button>
+      </view>
+    </view>
+  </view>

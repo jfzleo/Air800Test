@@ -1,0 +1,63 @@
+/* pages/bms/parameter/parameter.wxss */
+/*swiper*/
+@import "../internetHead/internetHead.wxss";
+@import "../bleHead/bleHead.wxss";
+@import "../bleControl/bleControl.wxss";
+@import "../total/total.wxss";
+@import "../single/single.wxss";
+@import "../parameter/parameter.wxss";
+
+.container {
+  padding : 0rpx 0rpx;
+}
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.hot-box {
+  display: block;
+  height: 100%;
+  font-family: Helvetica;
+}
+
+/*tab*/
+.swiper-tab {
+  width: 100%;
+  height: 145rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #ccc;
+}
+.swiper-tab-list {
+  margin: 0 20px;
+  padding: 0 4px;
+  font-size: 22rpx;
+  text-align: center;
+  font-family: Helvetica;
+}
+.active {
+  /*border-bottom: 1px solid #FFCC00;*/
+  color: #1AAD19;
+}
+.swiper-tab-img {
+  text-align: center;
+}
+.img {
+  margin: 0rpx 0rpx 0rpx 0rpx;
+  width:  60rpx;
+  height: 60rpx;
+}
+.page-foot{ 
+  margin : 20rpx 0rpx;
+}
+.head {
+  display: flex;
+  width: 100%;
+  padding: 0rpx 0rpx;
+  margin: 0rpx 0rpx;
+}

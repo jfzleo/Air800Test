@@ -1,0 +1,10 @@
+/* pages/batteryGPS.wxss */
+
+.section{padding: 0 8px;}
+.section picker{display: inline-block;}
+.section .date{width: 55%;}
+.section .time{width: 45%;}
+
+.operator{text-align: center;margin: 8px 0;}
+
+#devicePositionHistory{width: 100%;height: 450px;}

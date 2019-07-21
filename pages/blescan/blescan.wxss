@@ -1,0 +1,33 @@
+/* pages/ble/blescan.wxss */
+.container {
+  padding: 0rpx 0rpx;
+  justify-content: flex-start;
+  height: 100%;
+  flex-grow: 1;
+}
+.btn-area {
+  margin-top: 20rpx;
+}
+.devices_summary {
+  padding: 10rpx;
+  font-size: 30rpx;
+}
+.device_list {
+  border-radius: 5rpx;
+  flex: 1;
+}
+.device_item {
+  margin: 15rpx 20rpx;
+  background-color: #FFF;
+  border-bottom: 1rpx solid #EEE;
+  padding: 6rpx 10rpx;
+  color: #666;
+  border-radius: 5rpx;
+}
+.device_item_hover {
+  background-color: rgba(0, 0, 0, .1);
+}
+button {
+  height: 80rpx;
+  font-size: 34rpx;
+}

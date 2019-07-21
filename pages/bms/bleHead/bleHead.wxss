@@ -1,0 +1,74 @@
+/* pages/bms/bleHead/bleHead.wxss */
+.bleContainer {
+  display:flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 10rpx 32rpx;
+  width: 100%;
+  height: 350rpx;
+}
+.bleStatus {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  margin: 0rpx 10rpx;
+  justify-content: center;
+  align-items: center;
+}
+.deviceInfo {
+  box-sizing:border-box;
+  border: 1px solid black;
+  display: flex;
+  border-bottom: none;
+  height: 70rpx;}
+  
+.deviceInfoLastItem{
+  box-sizing:border-box;
+  border: 1px solid black;
+  display: flex;
+  height: 70rpx;}
+.deviceInfo .key {
+  display: flex;
+  align-items: center;
+  box-sizing:border-box; 
+  background: #B9C1C0;
+  color: #365A91;
+  padding: 0rpx 26rpx;
+  flex: 1;
+  }
+.deviceInfo .value {
+  display: flex;
+  padding: 6rpx 26rpx;
+  word-break:break-all;
+  align-items: center;
+  background: #4170BE;
+  color: #fff;
+  flex: 2;}
+.bleStatus .status {
+  padding: 0 26rpx 0 10rpx;
+  flex: 1;
+}
+.btnConnect {height: 70rpx; font-size: 30rpx; flex : 2;}
+
+.resultNav .bmsVersion {
+  display: flex;
+  height: 100rpx;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 10rpx 32rpx;
+  /*width: 100%;
+  height: 350rpx;*/
+}
+
+.modal-content text {
+  margin: 15rpx 10rpx;
+}
+.modal-content progress {
+  margin: 15rpx 10rpx;
+}

@@ -1,0 +1,88 @@
+<!--pages/bms/parameter/parameter.wxml-->
+<import src="../../common/foot.wxml"/>
+
+<!--<include src="../bleHead/progress-modal.wxml"/>-->
+<include src="../bleHead/progress-dialog.wxml"/>
+
+<view class="container">
+
+<view class="head" wx:if="{{connectMode == 2}}">
+ <include src="../bleHead/bleHead.wxml"/>
+</view>
+<view class="head" wx:else>
+  <include src="../internetHead/internetHead.wxml"/>
+</view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="0" style="height:{{winHeight - 51}}px" bindchange="bindChange">
+ 
+  <!-- frag01 -->
+  <swiper-item catchtouchmove='catchTouchMove'>
+    <scroll-view class="hot-box" scroll-y="true" upper-threshold="50"
+     lower-threshold="100" bindscrolltolower="scrolltolower">
+ 
+      <!-- frag01 content -->
+      <include src="../total/total.wxml"/>
+      
+    </scroll-view>
+  </swiper-item>
+ 
+  <!-- frag02 -->
+  <swiper-item catchtouchmove='catchTouchMove'>
+    <scroll-view class="hot-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
+ 
+      <!-- 列表 -->
+      <include src="../single/single.wxml"/>
+    </scroll-view>
+  </swiper-item>
+ 
+  <!-- frag03 -->
+  <swiper-item catchtouchmove='catchTouchMove'>
+    <scroll-view class="hot-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
+ 
+      <include src="../parameter/parameter.wxml"/>
+    </scroll-view>
+  </swiper-item>
+ 
+  <!-- frag04 -->
+  <swiper-item catchtouchmove='catchTouchMove'>
+  <scroll-view class="hot-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
+     <view wx:if="{{connectMode == 1}}">
+      <!-- 地图 -->
+        <include src="../location/location.wxml"/>
+      </view>
+      <view wx:else>
+        <include src="../bleControl/bleControl.wxml"/>
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>
+
+<template is="foot"/>
+
+<!--tab_top-->
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'active' : ''}}" data-current="0" bindtap="swichNav">
+    <view class="swiper-tab-img">
+    <image class="img" src="{{currentTab==0 ? iconlists[0].focus: iconlists[0].normal}}"></image>
+    </view>
+      <view>总体</view>
+  </view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'active' : ''}}" data-current="1" bindtap="swichNav">
+     <view class="swiper-tab-img">
+     <image class="img" src="{{currentTab==1 ? iconlists[1].focus: iconlists[1].normal}}"></image>
+     </view>
+    <view>单芯</view>
+  </view>
+  <view class="swiper-tab-list {{currentTab==2 ? 'active' : ''}}" data-current="2" bindtap="swichNav">
+     <view class="swiper-tab-img">
+     <image class="img" src="{{currentTab==2 ? iconlists[2].focus: iconlists[2].normal}}">
+     </image></view>
+    <view>参数</view>
+  </view>
+  <view class="swiper-tab-list {{currentTab==3 ? 'active' : ''}}" data-current="3" bindtap="swichNav">
+     <view class="swiper-tab-img">
+     <image class="img" src="{{currentTab==3 ? iconlists[3].focus: iconlists[3].normal}}"></image></view>
+    <view>{{connectMode == 1 ? '地图' : '控制'}}</view>
+  </view>
+</view>
+</view>

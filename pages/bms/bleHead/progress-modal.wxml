@@ -1,0 +1,6 @@
+<modal class="modal" title="{{modalTitle}}" hidden="{{!modalShow}}" bindconfirm="modalChange" bindcancel="modalChange" backdrop="{{false}}">
+  <view class='modal-content'> 
+      <text>{{modalContent}}</text>
+      <progress show-info percent="{{modalProgress}}" />
+  </view>
+</modal>

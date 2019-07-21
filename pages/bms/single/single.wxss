@@ -1,0 +1,44 @@
+/* pages/bms/single.wxss */
+.single {
+  display:block;
+  box-sizing: border-box;
+  padding:0rpx 32rpx 0rpx;
+}
+.single .temperatureList {
+  display: flex;
+  box-sizing: border-box;
+  flex: 1;
+  flex-direction: row;
+  width: 100%;
+  margin: 0rpx 0rpx 20rpx 0rpx;
+}
+.single .temperatureListItem:last-child{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  flex:1;
+}
+.tableTitle {
+  display: flex;
+  color: #365A91;
+  padding: 10rpx 6rpx;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 30rpx;
+}
+.single .temperatureListItem {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-right: none;
+  flex:1;
+}
+.single .temperatureList .key{text-align: center; background: #B9C1C0;color: #365A91;padding: 0 4px;}
+.single .temperatureList .value{text-align: center; padding: 0 4px;word-break:break-all;background: #4170BE;color: #fff;}
+.single .itemList{border: 1px solid black;display: flex;border-bottom: none;}
+.single .itemList:last-child{border-bottom: 1px solid black;}
+.single .itemList .key{background: #B9C1C0;color: #365A91;padding: 0 4px;}
+.single .itemList .value{padding: 0 4px;word-break:break-all;background: #4170BE;color: #fff;flex: 1;}
+.single .singleBatteryInfo .key{width: 100px;}
